@@ -17,7 +17,7 @@ class ChannelAttention(nn.Module):
         return x * y.expand_as(x)
     
 
-    class ImprovedAttentionEEGNet(nn.Module):
+    class DualAttentionNet(nn.Module):
     """Enhanced EEGNet with Channel Attention + Residual connections + Label Smoothing ready"""
     def __init__(self, n_chans, n_outputs, n_times, F1=16, D=2, F2=32, kernel_length=64, drop_prob=0.4):
         super(ImprovedAttentionEEGNet, self).__init__()
